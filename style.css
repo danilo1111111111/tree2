@@ -1,0 +1,38 @@
+*{box-sizing:border-box;font-family:Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial}
+body{margin:0;background:#ffffff;color:#042044;min-height:100vh}
+header{padding:20px;text-align:center}
+header h1{margin:0;font-size:1.6rem}
+.sub{opacity:0.85;margin-top:6px;color:#374151}
+main{max-width:1200px;margin:20px auto;padding:18px;background:transparent;border-radius:8px}
+.controls{padding:10px 6px;border-bottom:1px solid rgba(6,78,59,0.04);display:flex;flex-direction:column;gap:12px}
+.controls .row{display:flex;gap:12px;align-items:center}
+.controls label{font-size:0.95rem;color:#0f172a}
+.controls select,input{background:#f8fafc;border:1px solid #e6eef8;color:#042044;padding:8px;border-radius:6px}
+.controls button{background:#0ea5a4;border:none;padding:8px 14px;color:#fff;border-radius:8px;font-weight:600;cursor:pointer}
+.controls .buttons button{background:#0ea5a4}
+.controls button[disabled]{opacity:0.45;cursor:not-allowed;}
+.viz{padding:12px}
+.viz-row{display:flex;gap:12px;justify-content:center}
+svg{display:block;background:#ffffff;border-radius:8px;border:1px solid #e6eef8}
+#canvas{flex:1}
+/* make tree svg responsive but keep its intrinsic drawing size via attributes */
+#treeCanvas{width:100%;max-width:1100px;height:auto;overflow:visible}
+
+/* show legend */
+#legend{display:flex}
+
+.node circle{stroke:#021028;stroke-width:2}
+.tnode text{font-size:12px;fill:#042044}
+.node text{pointer-events:none}
+.node.highlight circle{stroke:#0ea5a4;stroke-width:4;filter:drop-shadow(0 6px 12px rgba(14,165,164,0.15))}
+
+.link{pointer-events:none}
+.legend{padding:10px;margin-top:8px;display:flex;gap:12px;flex-wrap:wrap}
+.legend .item{display:flex;gap:6px;align-items:center;padding:6px 10px;background:#f8fafc;border-radius:8px}
+.footer,footer{margin-top:12px;text-align:center;opacity:0.85;color:#334155}
+.node-label{font-size:12px;fill:#042044}
+.tooltip{position:absolute;background:#fff;color:#042044;padding:6px 8px;border-radius:6px;box-shadow:0 6px 20px rgba(2,6,23,0.05);pointer-events:none;font-size:12px}
+/* subtle shadow for particles */
+.particle{filter:drop-shadow(0 6px 10px rgba(2,6,23,0.06))}
+.split-line{stroke:#0f172a;stroke-opacity:0.07;stroke-width:2;stroke-dasharray:6 3}
+.partition-rect{fill-opacity:0.02}
